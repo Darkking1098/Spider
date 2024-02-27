@@ -1,0 +1,65 @@
+i:is(.text, .badge) {
+    font-size: 0.7em;
+}
+i.badge {
+    padding: 2px 15px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+i.icon {
+    width: 36px;
+    cursor: pointer;
+    padding: 0;
+    aspect-ratio: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+i:is(.text, .badge).prime {
+    color: var(--prime);
+}
+i:is(.text, .badge).sec {
+    color: var(--gray_500);
+}
+i:is(.text, .badge).success {
+    color: var(--success);
+}
+i:is(.text, .badge).error {
+    color: var(--error);
+}
+i:is(.text, .badge).warn {
+    color: var(--warn);
+}
+i:is(.text, .badge).info {
+    color: var(--info);
+}
+.bg-prime {
+    background: rgba(var(--prime_rgb), 0.1);
+}
+.bg-sec {
+    background: #f1f1f1;
+}
+.bg-success {
+    background: rgba(var(--success_rgb), 0.1);
+}
+.bg-error {
+    background: rgba(var(--error_rgb), 0.1);
+}
+.bg-warn {
+    background: rgba(var(--warn_rgb), 0.1);
+}
+.bg-info {
+    background: rgba(var(--info_rgb), 0.1);
+}
+.bdr-success {
+    border: 2px solid var(--success);
+}
+.bdr-error {
+    border: 2px solid var(--error);
+}
+.bdr-warn {
+    border: 2px solid var(--warn);
+}
+.bdr-info {
+    border: 2px solid var(--info);
+}

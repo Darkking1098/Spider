@@ -1,0 +1,119 @@
+section.table_panel {
+    padding: 0;
+}
+.vu-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.vu-table :is(thead, tfoot) :is(th, td) {
+    padding-block: 10px;
+    background: var(--gray_400);
+}
+.vu-table thead :is(th, td) {
+    padding-block: 14px;
+}
+.vu-table thead:first-of-type :is(th,td):first-child{
+    border-top-left-radius: 8px;
+}
+.vu-table thead:first-of-type :is(th,td):last-child{
+    border-top-right-radius: 8px;
+}
+.vu-table thead:last-of-type::after,
+.vu-table tfoot:first-of-type::before {
+    content: "";
+    width: 100%;
+    height: 10px;
+    display: flex;
+}
+.vu-table :is(th, td) {
+    text-align: left;
+    padding: 6px 10px;
+}
+.vu-table tr > *:first-child {
+    padding-inline: 20px;
+}
+.vu-table thead tr:last-child {
+    padding-bottom: 10px;
+}
+.vu-table tbody tr.disabled {
+    color: var(--gray_400);
+}
+.vu-table tbody td {
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.vu-table tbody tr.hide {
+    display: none;
+}
+.vu-table a {
+    text-decoration: none;
+    color: inherit;
+}
+.vu-table th.min {
+    width: 0;
+    white-space: nowrap;
+}
+.vu-table tr.disabled {
+    color: var(--gray_500);
+}
+.vu-table tr .toggle_btn {
+    display: inline-flex;
+}
+.vu-table tr i {
+    width: 28px;
+    font-size: 0.8em;
+    border-radius: 4px;
+}
+.vu-table tr .menu_btn,
+.vu-table tr.disabled .toggle_btn .fa-eye,
+.vu-table tr:not(.disabled) .toggle_btn .fa-eye-slash {
+    display: none;
+}
+.vu-table tr .actions {
+    display: flex;
+    gap: 12px;
+}
+
+/* Menu  */
+.vu-btn-menu {
+    position: relative;
+}
+.vu-btn-menu .vu-menu {
+    font-family: var(--font);
+    text-align: left;
+    z-index: 2;
+    min-width: 100%;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    transform: translateY(10px);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 0 #00000033;
+    padding: 5px;
+    font-size: 0.9em;
+    letter-spacing: 0;
+    isolation: isolate;
+}
+.vu-btn-menu:not(:hover) .vu-menu {
+    display: none;
+}
+.vu-btn-menu .vu-menu::after {
+    position: absolute;
+    content: "";
+    display: block;
+    inset: 0;
+    transform: translateY(-10px);
+    z-index: -1;
+}
+.vu-btn-menu .vu-menu .vu-menu-item {
+    padding: 8px 15px;
+    font-weight: 600;
+    color: black;
+    display: flex;
+    white-space: nowrap;
+}
+.vu-btn-menu .vu-menu .vu-menu-item:hover {
+    background: rgba(var(--prime_rgb), 0.2);
+    border-radius: 5px;
+}

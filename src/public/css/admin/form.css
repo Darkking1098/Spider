@@ -1,0 +1,86 @@
+form {
+    gap: 20px;
+}
+form .hidden{
+    display: none;
+}
+section.panel .panel_title {
+    font-weight: 600;
+}
+section.panel .panel_desc {
+    margin-block: 6px 20px;
+    font-size: 0.8em;
+    color: var(--gray_500);
+    font-weight: 600;
+}
+.vu-btn[type="submit"] {
+    background: var(--prime);
+    color: white;
+    transition: all 0.3s;
+}
+.vu-btn[type="submit"]:hover {
+    background: var(--prime_dark);
+}
+fieldset {
+    border: none;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(min(230px, 100%), 1fr));
+}
+fieldset .field {
+    display: flex;
+    flex-direction: column;
+}
+fieldset .field label {
+    font-size: 0.7em;
+    font-weight: 600;
+    margin-left: 5px;
+    letter-spacing: 0.7px;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+}
+fieldset .field :is(input, select, textarea) {
+    width: 100%;
+    font-size: 0.85em;
+    padding: 9px 15px;
+    border: 2px solid transparent;
+    border-radius: 7px;
+    outline: none;
+    box-shadow: inset 0 0 0 1px var(--gray_300);
+}
+fieldset .field :is(input, select, textarea)::placeholder {
+    color: var(--gray_500);
+}
+fieldset .field :is(input, select, textarea):hover {
+    border-color: black;
+    box-shadow: none;
+}
+fieldset .field:has(:is(input, select, textarea):focus) label {
+    color: var(--prime);
+}
+fieldset .field :is(input, select, textarea):focus {
+    border-color: var(--prime);
+    box-shadow: none;
+    font-weight: 600;
+}
+fieldset .field:has(:is(input, select, textarea):focus:invalid) label {
+    color: var(--error);
+}
+fieldset .field :is(input, select, textarea):focus:invalid {
+    border-color: var(--error);
+    box-shadow: none;
+}
+fieldset .field .field_error {
+    text-align: right;
+    margin-top: 4px;
+    font-weight: 700;
+}
+fieldset label.checkbox_field {
+    display: flex;
+    gap: 10px;
+    font-size: 0.8em;
+    font-weight: 600;
+    cursor: pointer;
+    align-items: center;
+    width: fit-content;
+}

@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+:root {
+    --font: system-ui, -apple-system, "Segoe UI", "Open Sans", sans-serif;
+    height: 100%;
+    font-size: 62.5%;
+    font-family: var(--font);
+}
+body {
+    --header: 70px;
+    display: flex;
+    min-height: 100%;
+    flex-direction: column;
+    font-size: 1.6rem;
+}
+main {
+    flex-grow: 1;
+}
+.rflex {
+    display: flex;
+    flex-direction: row;
+}
+.cflex {
+    display: flex;
+    flex-direction: column;
+}
+.wrap {
+    flex-wrap: wrap;
+}
+.ais {
+    align-items: start;
+}
+.aie {
+    align-items: end;
+}
+.aic {
+    align-items: center;
+}
+.ass {
+    align-self: start;
+}
+.ase {
+    align-self: end;
+}
+.asc {
+    align-self: center;
+}
+.asst {
+    align-self: stretch;
+}
+.jcs {
+    justify-content: start;
+}
+.jce {
+    justify-content: end;
+}
+.jcc {
+    justify-content: center;
+}
+.jcsb {
+    justify-content: space-between;
+}
+.jcsa {
+    justify-content: space-around;
+}
+.jcse {
+    justify-content: space-evenly;
+}
+.pos-abs {
+    position: absolute;
+}
+.pos-fix {
+    position: fixed;
+}
+.pos-rel {
+    position: relative;
+}
+.pos-sti {
+    position: sticky;
+}
+.img_wrap {
+    container-type: inline-size;
+}
+.img_wrap img{
+    width: 100%;
+}
+img {
+    object-fit: cover;
+    display: block;
+    max-width: 100%;
+}
+canvas {
+    display: block;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500;
+    line-height: 1em;
+}
+h1 {
+    font-size: calc(1.6em + 0.8vw);
+}
+h2 {
+    font-size: calc(1.4em + 0.6vw);
+}
+h3 {
+    font-size: calc(1.3em + 0.4vw);
+}
+h4 {
+    font-size: calc(1.2em + 0.4vw);
+}
+h5 {
+    font-size: calc(1em + 0.2vw);
+}
+h6,
+p {
+    font-size: 1em;
+}
+.vu-btn {
+    text-decoration: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 6px;
+    padding: 9px 20px;
+    border: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: inherit;
+    font-size: 0.9em;
+    text-transform: capitalize;
+    background: var(--gray_comp_200, #e9ecef);
+}

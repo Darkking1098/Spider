@@ -1,0 +1,16 @@
+{
+    "name": "vector/spider",
+    "description": "Modern admin panel",
+    "autoload": {
+        "psr-4": {
+            "Vector\\Spider\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Darkking1098",
+            "email": "ajaykumarraven147@gmail.com"
+        }
+    ],
+    "require": {}
+}
