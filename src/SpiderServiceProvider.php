@@ -28,7 +28,7 @@ class SpiderServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . "/views", "Spider");
 
         // Admin Routes
-        Route::middleware(['web',AdminAuthMiddleware::class])->prefix('admin')->group(__DIR__ . '/routes/admin.php')->group($ADMIN_ROUTES);
+        Route::middleware(['web', AdminAuthMiddleware::class])->prefix('admin')->group(__DIR__ . '/routes/admin.php')->group($ADMIN_ROUTES);
 
         // Admin Routes
         Route::middleware(['api', AdminApiAuthMiddleware::class])->prefix('api/admin')->group(__DIR__ . '/routes/api_admin.php')->group($ADMIN_API_ROUTES);
@@ -37,5 +37,9 @@ class SpiderServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/public' => public_path('vector/spider')
         ], 'spider-public');
+
+        $this->publishes([
+            __DIR__ . 'config.php' => config_path('vector.php'),
+        ], 'spider-config');
     }
 }

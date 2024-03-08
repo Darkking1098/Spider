@@ -170,7 +170,7 @@ class AdminPageController extends Controller
     {
         $page = AdminPage::find($pageId);
         if ($page) {
-            $params['webpage_slug'] = strtolower($params['webpage_slug']);
+            $params['page_uri'] = strtolower($params['page_uri']);
             try {
                 $result = $page->update($params);
                 $msg = "Webpage updated successfully...";

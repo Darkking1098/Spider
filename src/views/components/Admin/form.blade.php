@@ -3,7 +3,7 @@
         <link rel="stylesheet" href="{{url('vector/spider/css/admin/form.css')}}">
     @endprepend
 @endonce
-<x-admin.response></x-admin.response>
+<x-Spider::admin.response></x-Spider::admin.response>
 <form action="{{ Request::url() }}" method="post" class="cflex" enctype="multipart/form-data">
     <div class="hidden">@csrf</div>
     {{ $slot }}
