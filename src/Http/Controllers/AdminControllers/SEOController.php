@@ -149,11 +149,12 @@ class SEOController extends SEOBase
             try {
                 $result = $webPage->save();
                 $msg = "Webpage status changed.";
+                $extra = ["status" => $webPage->webpage_status ? "ACTIVE" : "DISABLED"];
             } catch (\Throwable $th) {
                 $msg = "Some Error Occured...";
             }
         }
-        return ['success' => $result ?? false, 'msg' => $msg ?? "WebPage not exists"];
+        return ['success' => $result ?? false, 'msg' => $msg ?? "WebPage not exists"] + ($extra ?? []);
     }
     function delete_webpage($webPageId, $force)
     {
@@ -192,7 +193,6 @@ class SEOController extends SEOBase
             $msg = "Webimage Uploaded Successfully...";
             $extra = ["webImage" => $webImage->toArray()];
         } catch (\Throwable $th) {
-            dd($th);
             $msg = "Some Error Occured...";
         }
         return ['success' => $result ?? false, 'msg' => $msg] + ($extra ?? []);
